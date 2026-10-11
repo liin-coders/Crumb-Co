@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crumb &amp; Co. | Artisan Bakery &amp; Patisserie</title>
+  <meta name="description" content="Handcrafted cakes, croissants, macarons and artisan breads baked fresh every day.">
+
+  <!-- fav icon  -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io_Cc/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io_Cc/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io_Cc/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- font links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleresponsive.css">
+  <script>
+    /* graceful fallback if an image link fails */
+    function imgErr(i) { i.onerror = null; i.src = 'data:image/svg+xml;utf8,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#faf5ea"/><stop offset="1" stop-color="#e8d8bb"/></linearGradient></defs><rect width="600" height="600" fill="url(#g)"/><text x="50%" y="54%" font-size="170" text-anchor="middle">🥐</text></svg>'); }
+  </script>
+</head>
+
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="hdr" id="hdr">
+    <div class="hdr-in">
+      <a href="#home" class="logo" aria-label="Crumb &amp; Co. home"><b>C</b>Crumb <span>&amp; Co.</span></a>
+
+      <div class="search-box" id="searchBox">
+        <svg viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="7" />
+          <path d="m20 20-3.5-3.5" />
+        </svg>
+        <input id="searchInput" type="search" placeholder="Search croissants, cakes, macarons…" autocomplete="off"
+          aria-label="Search products">
+        <div class="results" id="results"></div>
+      </div>
+
+      <div class="icons">
+        <button class="ibtn search-toggle" id="searchToggle" aria-label="Search"><svg viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7" />
+            <path d="m20 20-3.5-3.5" />
+          </svg></button>
+        <button class="ibtn" id="wishBtn" data-open="wishDrawer" aria-label="Wishlist"><svg viewBox="0 0 24 24">
+            <path
+              d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 2.6 4.5 6.3 4.5c2.1 0 3.9 1.2 5.7 3.3 1.8-2.1 3.6-3.3 5.7-3.3 3.7 0 5.4 3.9 3.9 7.3C19.5 16.4 12 21 12 21z" />
+          </svg></button>
+        <button class="ibtn" id="cartBtn" data-open="cartDrawer" aria-label="Cart"><svg viewBox="0 0 24 24">
+            <path d="M5 8h14l-1 12H6L5 8z" />
+            <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+          </svg><span class="hdot" id="cartDot"></span></button>
+        <button class="ibtn burger" id="burger" aria-label="Menu"><svg viewBox="0 0 24 24">
+            <path d="M4 8h16M4 16h16" />
+          </svg></button>
+      </div>
+
+      <nav class="nav" id="nav">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#products">Products</a>
+        <a href="#cta">Order Now</a>
+        <a href="#collection">Collection</a>
+        <a href="#cakes">Special Cakes</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ 01 HERO ============ -->
+    <section id="home">
+      <div id="hero">
+        <div class="hero-track">
+
+          <div class="slide" data-word="FRESH" style="--bg:var(--cream-l)">
+            <div class="container slide-in">
+              <div class="slide-text">
+                <span class="eyebrow">Artisan Bakery · Since 2012</span>
+                <h1>Baked fresh, <em>every single</em> dawn.</h1>
+                <p>Hand-laminated croissants and golden loaves, warm from the oven and delivered to your door.</p>
+                <div class="row">
+                  <a href="#cta" class="btn btn-fill">Order Now</a>
+                  <a href="#products" class="btn btn-link">Explore Menu</a>
+                </div>
+              </div>
+              <div class="slide-art">
+                <div class="arch"><img
+                    src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=900&q=75"
+                    alt="Fresh butter croissants" draggable="false" onerror="imgErr(this)"></div>
+                <div class="circle"><img
+                    src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=70"
+                    alt="Sourdough loaf" draggable="false" onerror="imgErr(this)"></div>
+                <div class="float"><b>4.9 ★</b><small>12,000+ happy reviews</small></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide" data-word="CAKES" style="--bg:#fff">
+            <div class="container slide-in">
+              <div class="slide-text">
+                <span class="eyebrow">Celebration Cakes</span>
+                <h1>Cakes that turn moments into <em>memories.</em></h1>
+                <p>From intimate birthdays to grand weddings, every tier is crafted with Belgian chocolate and real
+                  cream.</p>
+                <div class="row">
+                  <a href="#cakes" class="btn btn-arrow">Explore Cakes <i><svg viewBox="0 0 24 24">
+                        <path d="M5 12h14M13 6l6 6-6 6" />
+                      </svg></i></a>
+                  <a href="#contact" class="btn btn-outline">Custom Order</a>
+                </div>
+              </div>
+              <div class="slide-art">
+                <div class="arch"><img
+                    src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=75"
+                    alt="Chocolate truffle cake" draggable="false" onerror="imgErr(this)"></div>
+                <div class="circle"><img
+                    src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=400&q=70"
+                    alt="Pink celebration cake" draggable="false" onerror="imgErr(this)"></div>
+                <div class="float"><b>200+</b><small>Custom cake designs</small></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide" data-word="MACARON" style="--bg:var(--cream)">
+            <div class="container slide-in">
+              <div class="slide-text">
+                <span class="eyebrow">Patisserie Collection</span>
+                <h1>Delicate macarons, <em>crafted</em> to perfection.</h1>
+                <p>Almond shells, silky ganache and a whisper of rose. Gift a box of pure elegance.</p>
+                <div class="row">
+                  <a href="#collection" class="btn btn-cream">Shop Macarons</a>
+                  <a href="#about" class="btn btn-link">Our Story</a>
+                </div>
+              </div>
+              <div class="slide-art">
+                <div class="arch"><img
+                    src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=900&q=75"
+                    alt="Colourful macarons" draggable="false" onerror="imgErr(this)"></div>
+                <div class="circle"><img
+                    src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=400&q=70"
+                    alt="Cookies" draggable="false" onerror="imgErr(this)"></div>
+                <div class="float"><b>12 flavours</b><small>Made in small batches</small></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide" data-word="LOAF" style="--bg:var(--cream-l)">
+            <div class="container slide-in">
+              <div class="slide-text">
+                <span class="eyebrow">From Our Stone Oven</span>
+                <h1>Golden loaves, <em>slow-fermented</em> for 48 hours.</h1>
+                <p>Crackling crust, tender crumb and a tangy depth you can only get from patience.</p>
+                <div class="row">
+                  <a href="#products" class="btn btn-fill">Taste Sourdough</a>
+                  <a href="#cakes" class="btn btn-arrow">View Cakes <i><svg viewBox="0 0 24 24">
+                        <path d="M5 12h14M13 6l6 6-6 6" />
+                      </svg></i></a>
+                </div>
+              </div>
+              <div class="slide-art">
+                <div class="arch"><img
+                    src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=75"
+                    alt="Artisan bread" draggable="false" onerror="imgErr(this)"></div>
+                <div class="circle"><img
+                    src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?auto=format&fit=crop&w=400&q=70"
+                    alt="Pastries" draggable="false" onerror="imgErr(this)"></div>
+                <div class="float"><b>Daily</b><small>Baked before sunrise</small></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="dots hero-dots" id="heroDots"></div>
+      </div>
+    </section>
+
+    <!-- ============ 02 ABOUT ============ -->
+    <section id="about" class="sec bg-w">
+      <div class="container">
+        <div class="about-collage">
+          <div class="about-col l">
+            <img class="a-arch"
+              src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?auto=format&fit=crop&w=700&q=70"
+              alt="Our bakery" loading="lazy" onerror="imgErr(this)">
+            <img class="a-small"
+              src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=500&q=70"
+              alt="Fresh cookies" loading="lazy" onerror="imgErr(this)">
+          </div>
+          <div class="about-card">
+            <span class="eyebrow">About Us</span>
+            <h2 class="title">A little bakery with a big love for <em>butter.</em></h2>
+            <p>Crumb &amp; Co. began in a tiny kitchen with one oven and a family recipe book. Today, our bakers still
+              shape every loaf by hand and use real butter, single-origin chocolate and seasonal fruit. Nothing
+              artificial, ever.</p>
+            <div class="stats">
+              <div><b>12+</b><small>Years</small></div>
+              <div><b>80+</b><small>Recipes</small></div>
+              <div><b>50k</b><small>Customers</small></div>
+            </div>
+            <a href="#products" class="btn btn-fill">Discover Our Bakes</a>
+          </div>
+          <div class="about-col r">
+            <img class="a-circle"
+              src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=70"
+              alt="Macarons" loading="lazy" onerror="imgErr(this)">
+            <img class="a-round"
+              src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=70"
+              alt="Artisan bread" loading="lazy" onerror="imgErr(this)">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 PRODUCTS ============ -->
+    <section id="products" class="sec bg-cl">
+      <div class="container">
+        <div class="sec-head">
+          <div><span class="eyebrow">Signature Selection</span>
+            <h2 class="title">Our most <em>loved</em> creations</h2>
+          </div>
+          <p>Five bakes our regulars come back for, week after week.</p>
+        </div>
+        <div class="p-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ 04 PROMOS ============ -->
+    <section id="promos" class="sec bg-c" style="padding:80px 0">
+      <div class="container">
+        <div class="sec-head" style="margin-bottom:30px">
+          <div><span class="eyebrow">Offers &amp; Deals</span>
+            <h2 class="title" style="font-size:clamp(30px,3.6vw,46px)">Sweet savings, <em>just for you</em></h2>
+          </div>
+          <p>Tap a code to copy it. Slide to see all offers.</p>
+        </div>
+        <div class="promo-wrap">
+          <div class="promo-track" id="promoTrack"></div>
+          <div class="dots" id="promoDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 05 COLLECTION ============ -->
+    <section id="collection" class="sec bg-w">
+      <div class="container">
+        <div class="sec-head">
+          <div><span class="eyebrow">The Collection</span>
+            <h2 class="title">Curated for <em>every craving</em></h2>
+          </div>
+          <p>Three handpicked collections, each with its own mood and flavours.</p>
+        </div>
+        <div id="collections"></div>
+      </div>
+    </section>
+
+    <!-- ============ 06 CTA ============ -->
+    <section id="cta" class="sec bg-cl">
+      <div class="container">
+        <div class="cta">
+          <div class="cta-pics" id="ctaPics">
+            <div class="dots cta-dots" id="ctaDots"></div>
+          </div>
+          <div class="cta-text">
+            <span class="eyebrow">Order Now</span>
+            <h2 class="title">Hungry for something <em>special?</em></h2>
+            <p>Tell us what you are craving and our bakers will have it fresh, packed beautifully and at your door on
+              time.</p>
+            <a href="#contact" class="btn btn-arrow">Order Now <i><svg viewBox="0 0 24 24">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 07 SPECIAL CAKES ============ -->
+    <section id="cakes" class="sec bg-c">
+      <div class="container">
+        <div class="sec-head">
+          <div><span class="eyebrow">Special Cakes</span>
+            <h2 class="title">Cakes worth <em>celebrating</em></h2>
+          </div>
+          <p>Ten premium cakes for every occasion. <span class="vm"
+              style="display:inline-grid;vertical-align:middle"></span> Veg &nbsp;<span class="vm nv"
+              style="display:inline-grid;vertical-align:middle"></span> Contains egg</p>
+        </div>
+        <div class="cake-grid" id="cakeGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ 08 FAQ ============ -->
+    <section id="faq" class="sec bg-w">
+      <div class="container faq-wrap">
+        <div class="faq-side">
+          <span class="eyebrow">FAQs</span>
+          <h2 class="title">Questions? <em>We have answers.</em></h2>
+          <p>Everything you need to know about ordering, delivery and storing your treats.</p>
+          <div class="faq-help"><b>Still curious?</b>Our team replies within a few hours.<br><a href="#contact">Contact
+              us</a></div>
+        </div>
+        <div id="faqList"></div>
+      </div>
+    </section>
+
+    <!-- ============ 09 CONTACT ============ -->
+    <section id="contact" class="sec bg-cl">
+      <div class="container">
+        <div class="contact">
+          <div class="map">
+            <iframe title="Our location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=Pathankot%2C%20Punjab%20145001&output=embed"></iframe>
+            <div class="map-chip"><i><svg viewBox="0 0 24 24">
+                  <path d="M12 21s7-6.2 7-11.5a7 7 0 1 0-14 0C5 14.8 12 21 12 21z" />
+                  <circle cx="12" cy="9.5" r="2.5" />
+                </svg></i>
+              <div><b>Visit our bakery</b><small>Open daily · 7 AM – 10 PM</small></div>
+            </div>
+          </div>
+          <form class="c-form" id="contactForm" novalidate>
+            <span class="eyebrow">Contact Us</span>
+            <h2 class="title">Let's bake something <em>together</em></h2>
+            <div class="c-info">
+              <div><svg viewBox="0 0 24 24">
+                  <path d="M12 21s7-6.2 7-11.5a7 7 0 1 0-14 0C5 14.8 12 21 12 21z" />
+                  <circle cx="12" cy="9.5" r="2.5" />
+                </svg><b>Visit</b>12, Baker Street, Connaught Place, Pathankot</div>
+              <div><svg viewBox="0 0 24 24">
+                  <path
+                    d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
+                </svg><b>Call</b>+91 98765 43210</div>
+              <div><svg viewBox="0 0 24 24">
+                  <rect x="3" y="5" width="18" height="14" rx="3" />
+                  <path d="m4 7 8 6 8-6" />
+                </svg><b>Email</b>hello@crumbandco.in</div>
+            </div>
+            <div class="f-row">
+              <div class="field"><label for="cName">Full Name</label><input id="cName" required
+                  placeholder="Your name"><small class="em">Please enter your name</small></div>
+              <div class="field"><label for="cPhone">Phone</label><input id="cPhone" type="tel" inputmode="numeric"
+                  required placeholder="10-digit number"><small class="em">Enter a valid 10-digit number</small></div>
+            </div>
+            <div class="f-row">
+              <div class="field"><label for="cEmail">Email</label><input id="cEmail" type="email" required
+                  placeholder="you@email.com"><small class="em">Enter a valid email</small></div>
+              <div class="field"><label for="cSub">Subject</label>
+                <select id="cSub" required>
+                  <option value="">Select a topic</option>
+                  <option>Custom cake order</option>
+                  <option>Bulk / corporate order</option>
+                  <option>Delivery query</option>
+                  <option>Feedback</option>
+                  <option>Other</option>
+                </select><small class="em">Please choose a subject</small>
+              </div>
+            </div>
+            <div class="field"><label for="cMsg">Message</label><textarea id="cMsg" required
+                placeholder="Tell us what you have in mind…"></textarea><small class="em">Please write a short
+                message</small></div>
+            <button type="submit" class="btn btn-fill">Send Message</button>
+            <div class="form-msg" id="formMsg"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ 10 FOOTER ============ -->
+  <footer>
+    <div class="container">
+      <div class="f-grid">
+        <div>
+          <a href="#home" class="logo"><b>C</b>Crumb <span>&amp; Co.</span></a>
+          <p>Handcrafted cakes, pastries and artisan breads, baked fresh every day with real butter, real chocolate and
+            a lot of love.</p>
+          <div class="social">
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24">
+                <path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v7h4v-7h3l1-4h-4V8z" />
+              </svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r=".6" />
+              </svg></a>
+          </div>
+          <div class="pay"><span>VISA</span><span>MASTERCARD</span><span>UPI</span><span>RUPAY</span></div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#cta">Order Now</a></li>
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#cakes">Special Cakes</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#cakes">Custom Cakes</a></li>
+            <li><a href="#cakes">Birthday &amp; Wedding Cakes</a></li>
+            <li><a href="#contact">Bulk &amp; Corporate Orders</a></li>
+            <li><a href="#cta">Home Delivery</a></li>
+            <li><a href="#collection">Gift Boxes</a></li>
+            <li><a href="#faq">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="f-contact">
+          <h4>Get in Touch</h4>
+          <ul>
+            <li><svg viewBox="0 0 24 24">
+                <path d="M12 21s7-6.2 7-11.5a7 7 0 1 0-14 0C5 14.8 12 21 12 21z" />
+                <circle cx="12" cy="9.5" r="2.5" />
+              </svg><span>12, Baker Street, Connaught Place,<br>Pathankot, Punjab, India</span></li>
+            <li><svg viewBox="0 0 24 24">
+                <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
+              </svg><a href="tel:+919876543210">+91 98765 43210</a></li>
+            <li><svg viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="14" rx="3" />
+                <path d="m4 7 8 6 8-6" />
+              </svg><a href="mailto:hello@crumbandco.in">hello@crumbandco.in</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <span>© <span id="yr">2026</span> Crumb &amp; Co. · Created by <b><a href="#">LiinStudio</a></b></span>
+        <nav><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a><a href="#home" class="totop"><svg
+              viewBox="0 0 24 24" style="width:16px;height:16px">
+              <path d="M12 19V5M6 11l6-6 6 6" />
+            </svg> Back to Top</a></nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ DRAWERS ============ -->
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="drawer" id="wishDrawer" aria-label="Wishlist">
+    <div class="d-head">
+      <h3>Wishlist <small id="wishCount"></small></h3><button class="x" data-close aria-label="Close"><svg
+          viewBox="0 0 24 24">
+          <path d="M6 6l12 12M18 6 6 18" />
+        </svg></button>
+    </div>
+    <div class="d-body" id="wishBody"></div>
+  </aside>
+
+  <aside class="drawer" id="cartDrawer" aria-label="Cart">
+    <div class="d-head">
+      <h3>Your Cart <small id="cartCount"></small></h3><button class="x" data-close aria-label="Close"><svg
+          viewBox="0 0 24 24">
+          <path d="M6 6l12 12M18 6 6 18" />
+        </svg></button>
+    </div>
+    <div class="d-body" id="cartBody"></div>
+    <div class="d-foot" id="cartFoot"></div>
+  </aside>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

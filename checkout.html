@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout | Crumb &amp; Co.</title>
+
+  <!-- fav icon  -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io_Cc/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io_Cc/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io_Cc/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- fonts cdn -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleresponsive.css">
+  <script>
+    function imgErr(i) { i.onerror = null; i.src = 'data:image/svg+xml;utf8,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600"><rect width="600" height="600" fill="#f1e6d3"/><text x="50%" y="54%" font-size="170" text-anchor="middle">🥐</text></svg>'); }
+  </script>
+</head>
+
+<body>
+
+  <header class="co-hdr">
+    <div class="container">
+      <a href="index.html" class="logo" style="display:flex"><b>C</b>Crumb <span>&amp; Co.</span></a>
+      <a href="index.html" class="back"><svg viewBox="0 0 24 24" style="width:16px;height:16px">
+          <path d="M19 12H5M11 6l-6 6 6 6" />
+        </svg> Continue Shopping</a>
+    </div>
+  </header>
+
+  <main class="co-main">
+    <div class="container">
+      <span class="eyebrow">Secure Checkout</span>
+      <h1 class="title">Complete your <em>order</em></h1>
+
+      <div id="emptyBox" class="panel" style="display:none;margin-top:40px">
+        <div class="empty">
+          <div><svg viewBox="0 0 24 24">
+              <path d="M5 8h14l-1 12H6L5 8z" />
+              <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+            </svg></div><b>Your cart is empty</b>Add a few treats before checking out.<br><br><a
+            href="index.html#products" class="btn btn-fill">Browse Bakes</a>
+        </div>
+      </div>
+
+      <div class="co-grid" id="coGrid">
+        <form id="orderForm" novalidate>
+          <div class="panel">
+            <h3><i>1</i>Contact &amp; Delivery</h3>
+            <div class="f-row">
+              <div class="field"><label for="fName">Full Name</label><input id="fName"
+                  placeholder="Your full name"><small class="em">Please enter your name</small></div>
+              <div class="field"><label for="fPhone">Phone Number</label><input id="fPhone" type="tel"
+                  inputmode="numeric" placeholder="10-digit mobile"><small class="em">Enter a valid 10-digit
+                  number</small></div>
+            </div>
+            <div class="field"><label for="fEmail">Email</label><input id="fEmail" type="email"
+                placeholder="you@email.com"><small class="em">Enter a valid email</small></div>
+            <div class="field"><label for="fAddr">Delivery Address</label><textarea id="fAddr" style="min-height:90px"
+                placeholder="House no., street, landmark"></textarea><small class="em">Please enter your address</small>
+            </div>
+            <div class="f3">
+              <div class="field"><label for="fCity">City</label><input id="fCity" placeholder="City"><small
+                  class="em">Required</small></div>
+              <div class="field"><label for="fState">State</label><input id="fState" placeholder="State"><small
+                  class="em">Required</small></div>
+              <div class="field"><label for="fPin">Pincode</label><input id="fPin" inputmode="numeric" maxlength="6"
+                  placeholder="6 digits"><small class="em">Enter a 6-digit pincode</small></div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3><i>2</i>Delivery Schedule</h3>
+            <div class="f-row">
+              <div class="field"><label for="fDate">Delivery Date</label><input id="fDate" type="date"><small
+                  class="em">Choose a delivery date</small></div>
+              <div class="field"><label for="fTime">Time Slot</label><select id="fTime">
+                  <option value="">Select a slot</option>
+                  <option>08:00 AM – 10:00 AM</option>
+                  <option>10:00 AM – 12:00 PM</option>
+                  <option>12:00 PM – 03:00 PM</option>
+                  <option>03:00 PM – 06:00 PM</option>
+                  <option>06:00 PM – 09:00 PM</option>
+                </select><small class="em">Choose a time slot</small></div>
+            </div>
+            <div class="field" style="margin-bottom:0"><label for="fNote">Order Notes (message on cake,
+                allergies…)</label><textarea id="fNote" style="min-height:90px" placeholder="Optional"></textarea></div>
+          </div>
+
+          <div class="panel">
+            <h3><i>3</i>Payment Method</h3>
+            <div class="pay-opt">
+              <label><input type="radio" name="pay" value="cod" checked><span>Cash on Delivery</span></label>
+              <label><input type="radio" name="pay" value="upi"><span>UPI</span></label>
+              <label><input type="radio" name="pay" value="card"><span>Card</span></label>
+            </div>
+          </div>
+        </form>
+
+        <aside class="panel sticky" id="summary">
+          <h3>Order Summary</h3>
+          <div class="co-items" id="coItems"></div>
+          <div id="coTotals"></div>
+          <button class="btn btn-fill" id="buyBtn" form="orderForm" type="submit"
+            style="width:100%;justify-content:center;margin-top:6px">Buy Now</button>
+          <p class="co-note">Demo checkout. No payment is processed and no data is sent anywhere.</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <div class="tick"><svg viewBox="0 0 24 24">
+          <path d="m5 12.5 4.5 4.5L19 7.5" />
+        </svg></div>
+      <h2>Order Placed!</h2>
+      <p>Thank you, <b id="mName"></b>. Your treats are being baked with love.</p>
+      <p id="mWhen"></p>
+      <span class="oid" id="mId"></span><br>
+      <a href="index.html" class="btn btn-fill">Back to Home</a>
+    </div>
+  </div>
+  <center><a style="margin: 10px;" href="index.html" class="btn btn-fill">Back to Home</a></center>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="data.js"></script>
+  <script src="checkout.js"></script>
+</body>
+
+</html>
