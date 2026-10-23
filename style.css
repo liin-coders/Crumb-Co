@@ -1855,7 +1855,7 @@ footer li a:hover {
 
 .totop:hover {
   background: var(--cream);
-  color: var(--black)
+  color: var(--black);
 }
 
 /* ======================== DRAWERS & TOAST ======================== */
